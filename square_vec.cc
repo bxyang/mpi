@@ -1,11 +1,3 @@
-// Copyright (c) 2014 Baidu.com, Inc. All Rights Reserved
-// @file square_vec.cc
-// @author yangbaoxing(yangbaoxing@baidu.com)
-// @date 2014/04/30 17:29:12
-// @version $Revision$ 
-// @brief 
-
-/* vim: set ts=4 sw=4 sts=4 tw=100 */
 
 #include <mpi.h>
 #include <stdlib.h>

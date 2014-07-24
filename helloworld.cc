@@ -1,10 +1,3 @@
-// Copyright (c) 2014 Baidu.com, Inc. All Rights Reserved
-// @file helloworld.cc
-// @author yangbaoxing(yangbaoxing@baidu.com)
-// @date 2014/04/24 18:38:24
-// @version $Revision$ 
-// @brief 
-//
 
 // mpic++ -I ~/var/openmpi/include/ helloworld.cc
 
