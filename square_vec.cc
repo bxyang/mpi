@@ -1,4 +1,3 @@
-
 #include <mpi.h>
 #include <stdlib.h>
 
@@ -29,7 +28,10 @@ int main(int argc, char* argv[]) {
     long int* root_start_end_buf;
     int used_process_num;
     
+    double start_time;   
+    double end_time;   
     if (cur_id == 0) {
+        start_time = MPI_Wtime();
         awail_process_num = num_process - 1;
         root_start_end_buf = new long int[2*num_process];
         root_start_end_buf[0] = 0;
@@ -59,11 +61,16 @@ int main(int argc, char* argv[]) {
             recv_counts, recv_offset, MPI_LONG_LONG, 0, MPI_COMM_WORLD);
 
     if (cur_id == 0) {
+        /*
         fprintf(stdout, "square: ");
         for (int i = 0; i < n; i++) {
             fprintf(stdout, "%lld, ", square_recv_buf[i]);
         }
         fprintf(stdout, "\n");
+        */
+        end_time = MPI_Wtime();
+
+        fprintf(stdout, "cost time: %f s\n", end_time-start_time);
     }
     MPI_Finalize();
 }
